@@ -1,0 +1,14 @@
+<ul class="ships">
+  <li *ngFor="let ship of ships"
+    [class.selected]="ship === selectedShip"
+    (click)="onSelected(ship)">
+    <span class="badge">{{ship.c}}</span> {{ship.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedShip">
+
+  <h2>{{selectedShip.name}} Details</h2>
+  <div><span>class:</span>{{selectedShip.c}}</div>
+  <div><label>name: {{selectedShip.name}}</label></div>
+</div>
