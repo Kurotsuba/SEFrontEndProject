@@ -10,5 +10,8 @@
 
   <h2>{{selectedShip.name}} Details</h2>
   <div><span>class:</span>{{selectedShip.c}}</div>
-  <div><label>name: {{selectedShip.name}}</label></div>
+  <div><span>name:</span>{{selectedShip.name | lowercase}}</div>
+  <div><span>caliber:</span>{{selectedShip.caliber}}</div>
+  <div><span>tonnage:</span>{{selectedShip.tonnage}}</div>
+  <div><span>length:</span>{{selectedShip.length}}</div>
 </div>
