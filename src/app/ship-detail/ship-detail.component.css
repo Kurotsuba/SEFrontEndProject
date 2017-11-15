@@ -1,0 +1,15 @@
+.ship-detail {
+    background-color: #f7f7f7;
+    height: 200px;
+    margin: 5px;
+    padding: 2px;
+    width: 250px;
+}
+.ship-detail div {
+    background-color: #daf0e9;
+    margin: 1px;
+}
+.ship-detail div div{
+    float: left;
+    width: 40%;
+}

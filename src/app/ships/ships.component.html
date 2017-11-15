@@ -1,17 +1,9 @@
-<ul class="ships">
+<div style="float: left"><ul class="ships">
   <li *ngFor="let ship of ships"
     [class.selected]="ship === selectedShip"
     (click)="onSelect(ship)">
     <span class="badge">{{ship.c}}</span> {{ship.name}}
   </li>
-</ul>
+</ul></div>
 
-<div *ngIf="selectedShip">
-
-  <h2>{{selectedShip.name}} Details</h2>
-  <div><span>class:</span>{{selectedShip.c}}</div>
-  <div><span>name:</span>{{selectedShip.name | lowercase}}</div>
-  <div><span>caliber:</span>{{selectedShip.caliber}}</div>
-  <div><span>tonnage:</span>{{selectedShip.tonnage}}</div>
-  <div><span>length:</span>{{selectedShip.length}}</div>
-</div>
+<div style="float: right"><app-ship-detail [ship]="selectedShip"></app-ship-detail></div>
