@@ -1,7 +1,7 @@
 <ul class="ships">
   <li *ngFor="let ship of ships"
     [class.selected]="ship === selectedShip"
-    (click)="onSelected(ship)">
+    (click)="onSelect(ship)">
     <span class="badge">{{ship.c}}</span> {{ship.name}}
   </li>
 </ul>
