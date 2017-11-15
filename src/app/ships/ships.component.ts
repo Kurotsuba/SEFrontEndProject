@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Ship } from '../ship';
+import { SHIPS } from '../ship-data';
 
 @Component({
   selector: 'app-ships',
@@ -7,10 +9,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class ShipsComponent implements OnInit {
+  ships = SHIPS;
+  selectedShip: Ship;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(ship: Ship): void{
+    this.selectedShip = ship;
   }
 
 }
